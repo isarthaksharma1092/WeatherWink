@@ -57,12 +57,16 @@ dependencies {
 
 
     // my dependencies
+
     //noinspection UseTomlInstead
-    {
-        implementation("com.facebook.shimmer:shimmer:0.5.0")
-        implementation("com.squareup.retrofit2:retrofit:2.11.0")
-        implementation("com.squareup.picasso:picasso:2.8")
-        implementation("com.google.android.gms:play-services-location:21.3.0")
-        implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-    }
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    //noinspection UseTomlInstead
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    //noinspection UseTomlInstead
+    implementation("com.squareup.picasso:picasso:2.8")
+    //noinspection UseTomlInstead
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    //noinspection UseTomlInstead
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
 }
