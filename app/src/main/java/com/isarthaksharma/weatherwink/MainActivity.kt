@@ -4,7 +4,9 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.nfc.Tag
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,32 +14,64 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.isarthaksharma.weatherwink.databinding.ActivityMainBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.HttpException
+import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
+    private val TAG:String = "Errors"
     private lateinit var mainBinding: ActivityMainBinding
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private var longitude: Double = 0.0
     private var latitude: Double = 0.0
 
+    private var recevied_Location= ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Request location permissions
+        requestPermissions()
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
-
-        // Set up window insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        lifecycleScope.launch {
+            delay(2000L)
+            val response = try {
+                Retrofit_Instance.createRetrofit.weatherRequest(recevied_Location)
+            } catch (e: IOException) {
+                Log.d(TAG, "IOException: ${e.message}")
+                Toast.makeText(this@MainActivity, "Check your internet connection.", Toast.LENGTH_LONG).show()
+                return@launch
 
-        // Request location permissions
-        requestPermissions()
+            } catch (e: HttpException) {
+                Log.d(TAG, "HttpException: ${e.message}")
+                Toast.makeText(this@MainActivity, "Server error: ${e.message}", Toast.LENGTH_LONG).show()
+                return@launch
+            }
+
+            if (response.isSuccessful && response.body() != null) {
+                Log.d(TAG, "Response Body: ${response.body()}")
+                Toast.makeText(this@MainActivity, "Weather data fetched successfully!", Toast.LENGTH_LONG).show()
+            } else {
+                val errorBody = response.errorBody()?.string() // Get the error message from the server
+                Log.d(TAG, "Error Response Code: ${response.code()} - Error Body: $errorBody")
+                Toast.makeText(this@MainActivity, "Something went wrong! Code: ${response.code()}", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     // Request location permissions and fetch location
@@ -54,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                 if (it.isSuccessful && it.result != null) {
                     longitude = it.result.longitude
                     latitude = it.result.latitude
-                    Toast.makeText(this, "Longitude ${longitude} & Latitude ${latitude}", Toast.LENGTH_LONG).show()
+                    recevied_Location="${latitude},${longitude}"
                 } else {
                     Toast.makeText(this, "Unable to get location", Toast.LENGTH_LONG).show()
                 }

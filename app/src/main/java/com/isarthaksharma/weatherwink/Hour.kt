@@ -1,10 +1,12 @@
 package com.isarthaksharma.weatherwink
 
 data class Hour(
-    val condition: Condition,
-    val is_day: Int,
+    val chance_of_rain: Int,
+    val chance_of_snow: Int,
+    val condition: ConditionXX,
     val temp_c: Double,
-    val temp_f: Double,
     val time: String,
-    val time_epoch: Int
+    val time_epoch: Int,
+    val will_it_rain: Int,
+    val will_it_snow: Int
 )
