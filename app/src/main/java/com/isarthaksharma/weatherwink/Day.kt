@@ -8,5 +8,5 @@ data class Day(
     val daily_will_it_snow: Int,
     val maxtemp_c: Double,
     val mintemp_c: Double,
-    val uv: Int
+    val uv: Double
 )

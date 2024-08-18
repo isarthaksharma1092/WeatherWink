@@ -69,4 +69,6 @@ dependencies {
     //noinspection UseTomlInstead
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+
 }

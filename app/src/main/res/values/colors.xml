@@ -3,5 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_black">#222121</color>
-
+    <color name="shimmerColor">#C2C2C2</color>
+    <color name="orange">#F19721</color>
+    <color name="green">#06BD63</color>
 </resources>

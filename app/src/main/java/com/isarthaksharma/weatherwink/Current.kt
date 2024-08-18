@@ -12,10 +12,10 @@ data class Current(
     val last_updated_epoch: Int,
     val precip_in: Double,
     val precip_mm: Double,
-    val pressure_mb: Int,
+    val pressure_mb: Double,
     val temp_c: Double,
-    val uv: Int,
-    val vis_km: Int,
+    val uv: Double,
+    val vis_km: Double,
     val wind_kph: Double,
     val wind_mph: Double
 )

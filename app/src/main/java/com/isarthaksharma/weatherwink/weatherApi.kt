@@ -9,7 +9,9 @@ interface weatherApi {
     @GET("forecast.json")
     suspend fun weatherRequest(
         @Query("q") q:String,
-        @Query("key") key: String ="Enter Your API KEY here",
-        @Query("days") days: Int = 1
+        @Query("key") key: String ="fc14669f2852449c9d261734231212",
+        @Query("days") days: Int = 1,
+        @Query("aqi") aqi:String = "yes",
+        @Query("alerts") alerts:String="yes"
     ): Response<dataClass_Weather>
 }
