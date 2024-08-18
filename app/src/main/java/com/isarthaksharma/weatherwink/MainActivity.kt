@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchWeatherData() {
         lifecycleScope.launch {
-            delay(500L)
+            delay(1000L)
             //requesting the network
             val response = try {
                 //creating instance
