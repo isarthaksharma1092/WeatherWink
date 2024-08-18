@@ -14,10 +14,10 @@ WeatherWink is an Android weather app that provides real-time weather informatio
 
 
 # Screenshots
-![IMG-20240818-WA0004 (Phone)](https://github.com/user-attachments/assets/b499c1aa-1529-44d7-ba96-178745b523bc) 
-![IMG-20240818-WA0003 (Phone)](https://github.com/user-attachments/assets/4355a1c0-e314-4b09-9df0-538e818a0e7c) 
-![IMG-20240818-WA0002 (Phone)](https://github.com/user-attachments/assets/52b88b99-f30c-4d08-a936-0520e53937d2) 
-![IMG-20240818-WA0001 (Phone)](https://github.com/user-attachments/assets/68511023-e49a-4889-b444-70d3f7f07fbb) 
+![IMG-20240818-WA0001](https://github.com/user-attachments/assets/ecc31810-9729-4d6e-94db-f7204625785b)
+![IMG-20240818-WA0000](https://github.com/user-attachments/assets/cd4c2804-13b0-46c4-a9d8-004228e2f9f3)
+![IMG-20240818-WA0003](https://github.com/user-attachments/assets/24a0b4c7-d55d-4477-a126-2f1ffa1fa646)
+![IMG-20240818-WA0002](https://github.com/user-attachments/assets/b48122a9-8d29-46e6-bfca-16d0378fc6ba)
 
 
 # Installation
