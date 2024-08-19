@@ -45,8 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         //location permission
         requestPermissions()
-        // response fetching
-        fetchWeatherData()
+        // response fetching [MOVED TO REQUEST PERMISSION]
         //setting data after getting response
         dataSetting = DataSetting(mainBinding)
 
@@ -55,7 +54,6 @@ class MainActivity : AppCompatActivity() {
             mainBinding.appUi.visibility = View.GONE
             mainBinding.shimmerLayout.startShimmer()
             requestPermissions()
-            fetchWeatherData()
             dataSetting = DataSetting(mainBinding)
 
             // Stop the refreshing animation
@@ -69,7 +67,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchWeatherData() {
         lifecycleScope.launch {
-            delay(1000L)
             //requesting the network
             val response = try {
                 //creating instance
@@ -123,6 +120,9 @@ class MainActivity : AppCompatActivity() {
                     longitude = it.result.longitude
                     latitude = it.result.latitude
                     recevied_Location = "${latitude},${longitude}"
+                    // after permission is granted starting the data request [UPDATED]
+                    fetchWeatherData()
+
                 } else {
                     Toast.makeText(this, "Unable to get location", Toast.LENGTH_LONG).show()
                 }
