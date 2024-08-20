@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
     private fun fetchWeatherData() {
         lifecycleScope.launch {
             //requesting the network
+            Log.d(TAG,"$recevied_Location")
             val response = try {
                 //creating instance
                 Retrofit_Instance.createRetrofit.weatherRequest(recevied_Location)
@@ -120,6 +121,7 @@ class MainActivity : AppCompatActivity() {
                     longitude = it.result.longitude
                     latitude = it.result.latitude
                     recevied_Location = "${latitude},${longitude}"
+
                     // after permission is granted starting the data request [UPDATED]
                     fetchWeatherData()
 
