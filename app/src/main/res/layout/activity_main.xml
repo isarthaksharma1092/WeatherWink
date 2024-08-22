@@ -392,8 +392,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter"/>
 
                                 <TextView
                                     android:id="@+id/temp12amConditions"
@@ -437,8 +436,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp1amConditions"
@@ -482,8 +480,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp2amConditions"
@@ -527,8 +524,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp3amConditions"
@@ -572,8 +568,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp4amConditions"
@@ -617,8 +612,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp5amConditions"
@@ -662,8 +656,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter"/>
 
                                 <TextView
                                     android:id="@+id/temp6amConditions"
@@ -706,8 +699,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp7amConditions"
@@ -750,8 +742,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp8amConditions"
@@ -795,8 +786,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter"/>
 
                                 <TextView
                                     android:id="@+id/temp9amConditions"
@@ -839,8 +829,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp10amConditions"
@@ -883,8 +872,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp11amConditions"
@@ -928,8 +916,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp12pmConditions"
@@ -973,8 +960,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp1pmConditions"
@@ -1018,8 +1004,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp2pmConditions"
@@ -1064,8 +1049,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp3pmConditions"
@@ -1110,8 +1094,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp4pmConditions"
@@ -1156,8 +1139,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp5pmConditions"
@@ -1202,8 +1184,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp6pmConditions"
@@ -1248,8 +1229,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter"/>
 
                                 <TextView
                                     android:id="@+id/temp7pmConditions"
@@ -1294,8 +1274,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter"/>
 
                                 <TextView
                                     android:id="@+id/temp8pmConditions"
@@ -1340,8 +1319,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter"/>
 
                                 <TextView
                                     android:id="@+id/temp9pmConditions"
@@ -1385,8 +1363,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter"/>
 
                                 <TextView
                                     android:id="@+id/temp10pmConditions"
@@ -1430,8 +1407,7 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/test_icon" />
+                                    android:scaleType="fitCenter" />
 
                                 <TextView
                                     android:id="@+id/temp11pmConditions"
