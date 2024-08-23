@@ -50,8 +50,11 @@ class futureForecast : AppCompatActivity() {
         futureBinding.clickable2.setOnClickListener {
             if (futureBinding.moreInfo2.visibility == View.VISIBLE) {
                 futureBinding.moreInfo2.visibility = View.GONE
+                futureBinding.moreInfoLine2.visibility = View.GONE
             } else {
                 futureBinding.moreInfo2.visibility = View.VISIBLE
+                futureBinding.moreInfoLine2.visibility = View.VISIBLE
+
             }
         }
 
@@ -66,8 +69,10 @@ class futureForecast : AppCompatActivity() {
         futureBinding.clickable3.setOnClickListener {
             if (futureBinding.moreInfo3.visibility == View.VISIBLE) {
                 futureBinding.moreInfo3.visibility = View.GONE
+                futureBinding.moreInfoLine3.visibility = View.GONE
             } else {
                 futureBinding.moreInfo3.visibility = View.VISIBLE
+                futureBinding.moreInfoLine3.visibility = View.VISIBLE
             }
         }
 

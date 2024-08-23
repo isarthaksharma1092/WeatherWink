@@ -93,9 +93,6 @@ class MainActivity : AppCompatActivity() {
                     dataSetting.setAqi(it)
                     dataSetting.setFutureForecast(it)
                 }
-
-
-                Toast.makeText(this@MainActivity, "Weather data fetched successfully!", Toast.LENGTH_LONG).show()
                 mainBinding.shimmerLayout.stopShimmer()
                 mainBinding.shimmerLayout.visibility = View.GONE
                 mainBinding.appUi.visibility = View.VISIBLE
@@ -104,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 val errorBody = response.errorBody()?.string() // Get the error message from the server
                 Log.d(TAG, "Error Response Code: ${response.code()} - Error Body: $errorBody")
-                Toast.makeText(this@MainActivity, "Something went wrong! Code: ${response.code()}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, "Something went wrong! Code: ${errorBody}", Toast.LENGTH_LONG).show()
             }
         }
     }

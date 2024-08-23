@@ -2,6 +2,7 @@ package com.isarthaksharma.weatherwink
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.widget.Toast
 import com.isarthaksharma.weatherwink.databinding.ActivityMainBinding
 import com.squareup.picasso.Picasso
 import java.time.DateTimeException
@@ -29,6 +30,7 @@ class DataSetting(private val mainBinding: ActivityMainBinding) {
         mainBinding.rainChance.text = "${data.forecast.forecastday[0].day.daily_chance_of_rain} %"
         mainBinding.minTemp.text = "${data.forecast.forecastday[0].day.mintemp_c} ℃"
         mainBinding.maxTemp.text = "${data.forecast.forecastday[0].day.maxtemp_c} ℃"
+        Toast.makeText(mainBinding.root.context,data.current.condition.text,Toast.LENGTH_LONG).show()
     }
 
     fun setMoonSunTime(data: dataClass_Weather) {
@@ -190,7 +192,7 @@ class DataSetting(private val mainBinding: ActivityMainBinding) {
         val dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd")
         val forcastDate1 = data.forecast.forecastday[0].date
         val forcastWeather1 = data.forecast.forecastday[0].day.condition.text
-        val forcastDay1 = LocalDate.parse(data.forecast.forecastday[0].date,dateFormat)
+        val forcastDay1 = LocalDate.parse(data.forecast.forecastday[0].date,dateFormat).dayOfWeek.toString()
         val forcastImage1 = data.forecast.forecastday[0].day.condition.icon
         val forcastMaxTemp1 = data.forecast.forecastday[0].day.maxtemp_c.toString()
         val forcastMinTemp1 = data.forecast.forecastday[0].day.mintemp_c.toString()
@@ -199,7 +201,7 @@ class DataSetting(private val mainBinding: ActivityMainBinding) {
         // day 2
         val forcastDate2 = data.forecast.forecastday[1].date
         val forcastWeather2 = data.forecast.forecastday[1].day.condition.text
-        val forcastDay2 = LocalDate.parse(data.forecast.forecastday[1].date,dateFormat)
+        val forcastDay2 = LocalDate.parse(data.forecast.forecastday[1].date,dateFormat).dayOfWeek.toString()
         val forcastImage2 = data.forecast.forecastday[1].day.condition.icon
         val forcastMaxTemp2 = data.forecast.forecastday[1].day.maxtemp_c.toString()
         val forcastMinTemp2 = data.forecast.forecastday[1].day.mintemp_c.toString()
@@ -208,7 +210,7 @@ class DataSetting(private val mainBinding: ActivityMainBinding) {
         // day 3
         val forcastDate3 = data.forecast.forecastday[2].date
         val forcastWeather3 = data.forecast.forecastday[2].day.condition.text
-        val forcastDay3 = LocalDate.parse(data.forecast.forecastday[2].date,dateFormat)
+        val forcastDay3 = LocalDate.parse(data.forecast.forecastday[2].date,dateFormat).dayOfWeek.toString()
         val forcastImage3 = data.forecast.forecastday[2].day.condition.icon
         val forcastMaxTemp3 = data.forecast.forecastday[2].day.maxtemp_c.toString()
         val forcastMinTemp3 = data.forecast.forecastday[2].day.mintemp_c.toString()
