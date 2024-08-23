@@ -89,4 +89,5 @@
     <string name="air_quality">Air Quality</string>
     <string name="knowledgeAQI">The higher the AQI value, the greater the level of air pollution and the greater the health concern.</string>
     <string name="pm_10">PM_10</string>
+    <string name="forcast">Forcast</string>
 </resources>

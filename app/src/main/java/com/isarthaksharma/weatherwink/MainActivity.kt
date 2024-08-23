@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity() {
                     dataSetting.setMoonSunTime(it)
                     dataSetting.setHourlyTemp(it)
                     dataSetting.setAqi(it)
+                    dataSetting.setFutureForecast(it)
                 }
 
 

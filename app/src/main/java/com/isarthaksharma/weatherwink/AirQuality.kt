@@ -6,5 +6,5 @@ data class AirQuality(
     val o3: Double,
     val pm10: Double,
     val pm2_5: Double,
-    val so2: Double,
+    val so2: Double
 )

@@ -16,7 +16,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <com.facebook.shimmer.ShimmerFrameLayout
@@ -50,9 +49,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/currentStatus"
                     android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:layout_margin="5dp"
-                    app:cardCornerRadius="45dp"
+                    android:layout_height="600dp"
+                    app:cardCornerRadius="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -60,7 +58,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        >
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -72,13 +71,13 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"/>
 
                         <LinearLayout
                             android:id="@+id/loactionHolder"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="60dp"
                             android:gravity="center"
                             android:orientation="horizontal"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -161,7 +160,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
-                    android:layout_marginVertical="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
                     android:backgroundTint="@color/light_black"
                     app:cardCornerRadius="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -361,1081 +361,1129 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/currDetailInfo">
 
-                    <HorizontalScrollView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fillViewport="true"
-                        android:scrollbars="none">
-
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginVertical="15dp"
+                        android:orientation="vertical">
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:orientation="horizontal">
 
-
-                            <!--                    0:00 Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
+                            <TextView
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_00_00_am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img12am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"/>
-
-                                <TextView
-                                    android:id="@+id/temp12amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
+                                android:gravity="start"
+                                android:layout_weight="1"
+                                android:layout_marginHorizontal="7dp"
+                                android:textColor="@color/white"
+                                android:text="Today"/>
 
 
-                                <TextView
-                                    android:id="@+id/temp12am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    1:00 Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
+                            <TextView
+                                android:id="@+id/futureForecast"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_1_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img_1am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp1amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp1am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    2:00 Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_2_00_am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img_2am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp2amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp2am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    3:00 Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_3_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img_3am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp3amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp3am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    4:00 Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_4_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img_4am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp4amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp4am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    5:00 Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_5_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img_5am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp5amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp5am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    6:00Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/_6_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img_6am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"/>
-
-                                <TextView
-                                    android:id="@+id/temp6amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp6am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    7:00Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_7_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img7am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp7amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp7am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    8:00AM-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_8_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img8am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp8amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp8am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-
-                            <!--                    9:00Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_9_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img9am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"/>
-
-                                <TextView
-                                    android:id="@+id/temp9amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp9am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    10:00Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_10_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img10am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp10amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp10am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    11:00 Am-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_11_00am"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img11am"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp11amConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp11am"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    12:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_12_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img12pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp12pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp12pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    1:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_1_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img1pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp1pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:id="@+id/temp1pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    2:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_2_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img2pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp2pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp2pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    3:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_3_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img3pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp3pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp3pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    4:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_4_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img4pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp4pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp4pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    5:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_5_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img5pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp5pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp5pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    6:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_6_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img6pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp6pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp6pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    7:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_7_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img7pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"/>
-
-                                <TextView
-                                    android:id="@+id/temp7pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp7pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    8:00PM-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_8_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img8pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"/>
-
-                                <TextView
-                                    android:id="@+id/temp8pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp8pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-
-                            <!--                    9:00Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_9_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img9pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"/>
-
-                                <TextView
-                                    android:id="@+id/temp9pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp9pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    10:00Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_10_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img10pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter"/>
-
-                                <TextView
-                                    android:id="@+id/temp10pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp10pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-                            <!--                    11:00 Pm-->
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/_11_00pm"
-                                    android:textColor="@color/white" />
-
-                                <ImageView
-                                    android:id="@+id/img11pm"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginVertical="10dp"
-                                    android:scaleType="fitCenter" />
-
-                                <TextView
-                                    android:id="@+id/temp11pmConditions"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:textColor="@color/white" />
-
-
-                                <TextView
-                                    android:id="@+id/temp11pm"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="15dp"
-                                    android:textColor="@color/white" />
-                            </LinearLayout>
-
-
-                            <View
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="@android:color/darker_gray" />
-
-
+                                android:textColor="@color/white"
+                                android:gravity="end"
+                                android:layout_weight="1"
+                                android:text="Next 3 Days"/>
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end"
+                                android:src="@drawable/arrow_icon"/>
                         </LinearLayout>
-                    </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fillViewport="true"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <!--                    0:00 Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_00_00_am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img12am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter"/>
+
+                                    <TextView
+                                        android:id="@+id/temp12amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp12am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    1:00 Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_1_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img_1am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp1amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp1am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    2:00 Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_2_00_am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img_2am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp2amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp2am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    3:00 Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_3_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img_3am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp3amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp3am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    4:00 Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_4_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img_4am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp4amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp4am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    5:00 Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_5_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img_5am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp5amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp5am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    6:00Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/_6_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img_6am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter"/>
+
+                                    <TextView
+                                        android:id="@+id/temp6amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp6am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    7:00Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_7_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img7am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp7amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp7am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    8:00AM-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_8_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img8am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp8amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp8am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+
+                                <!--                    9:00Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_9_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img9am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter"/>
+
+                                    <TextView
+                                        android:id="@+id/temp9amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp9am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    10:00Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_10_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img10am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp10amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp10am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    11:00 Am-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_11_00am"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img11am"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp11amConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp11am"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    12:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_12_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img12pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp12pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp12pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    1:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_1_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img1pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp1pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/temp1pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    2:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_2_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img2pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp2pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp2pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    3:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_3_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img3pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp3pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp3pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    4:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_4_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img4pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp4pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp4pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    5:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_5_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img5pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp5pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp5pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    6:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_6_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img6pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp6pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp6pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    7:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_7_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img7pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter"/>
+
+                                    <TextView
+                                        android:id="@+id/temp7pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp7pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    8:00PM-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_8_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img8pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter"/>
+
+                                    <TextView
+                                        android:id="@+id/temp8pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp8pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+
+                                <!--                    9:00Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_9_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img9pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter"/>
+
+                                    <TextView
+                                        android:id="@+id/temp9pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp9pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    10:00Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_10_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img10pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter"/>
+
+                                    <TextView
+                                        android:id="@+id/temp10pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp10pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+                                <!--                    11:00 Pm-->
+                                <LinearLayout
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/_11_00pm"
+                                        android:textColor="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/img11pm"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginVertical="10dp"
+                                        android:scaleType="fitCenter" />
+
+                                    <TextView
+                                        android:id="@+id/temp11pmConditions"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:textColor="@color/white" />
+
+
+                                    <TextView
+                                        android:id="@+id/temp11pm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@android:color/darker_gray" />
+
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+
                 </androidx.cardview.widget.CardView>
 
                 <!--Defining current humidity,pressure,and wind speed-->

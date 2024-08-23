@@ -4,7 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import com.isarthaksharma.weatherwink.databinding.ActivityMainBinding
 import com.squareup.picasso.Picasso
+import java.time.DateTimeException
 import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.Date
 
 @SuppressLint("SetTextI18n")
 class DataSetting(private val mainBinding: ActivityMainBinding) {
@@ -182,4 +185,64 @@ class DataSetting(private val mainBinding: ActivityMainBinding) {
             mainBinding.root.context.startActivity(intentAQI)
         }
     }
+    fun setFutureForecast(data: dataClass_Weather) {
+        // day 1
+        val dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        val forcastDate1 = data.forecast.forecastday[0].date
+        val forcastWeather1 = data.forecast.forecastday[0].day.condition.text
+        val forcastDay1 = LocalDate.parse(data.forecast.forecastday[0].date,dateFormat)
+        val forcastImage1 = data.forecast.forecastday[0].day.condition.icon
+        val forcastMaxTemp1 = data.forecast.forecastday[0].day.maxtemp_c.toString()
+        val forcastMinTemp1 = data.forecast.forecastday[0].day.mintemp_c.toString()
+        val forcastAQI1 = data.forecast.forecastday[0].day.uv.toString()
+
+        // day 2
+        val forcastDate2 = data.forecast.forecastday[1].date
+        val forcastWeather2 = data.forecast.forecastday[1].day.condition.text
+        val forcastDay2 = LocalDate.parse(data.forecast.forecastday[1].date,dateFormat)
+        val forcastImage2 = data.forecast.forecastday[1].day.condition.icon
+        val forcastMaxTemp2 = data.forecast.forecastday[1].day.maxtemp_c.toString()
+        val forcastMinTemp2 = data.forecast.forecastday[1].day.mintemp_c.toString()
+        val forcastAQI2 = data.forecast.forecastday[1].day.uv.toString()
+
+        // day 3
+        val forcastDate3 = data.forecast.forecastday[2].date
+        val forcastWeather3 = data.forecast.forecastday[2].day.condition.text
+        val forcastDay3 = LocalDate.parse(data.forecast.forecastday[2].date,dateFormat)
+        val forcastImage3 = data.forecast.forecastday[2].day.condition.icon
+        val forcastMaxTemp3 = data.forecast.forecastday[2].day.maxtemp_c.toString()
+        val forcastMinTemp3 = data.forecast.forecastday[2].day.mintemp_c.toString()
+        val forcastAQI3 = data.forecast.forecastday[2].day.uv.toString()
+
+        val intentFutureForecast = Intent(mainBinding.root.context, futureForecast::class.java)
+        intentFutureForecast.putExtra("forcastDate1", forcastDate1)
+        intentFutureForecast.putExtra("forcastWeather1", forcastWeather1)
+        intentFutureForecast.putExtra("forcastDay1", forcastDay1)
+        intentFutureForecast.putExtra("forcastImage1", forcastImage1)
+        intentFutureForecast.putExtra("forcastMaxTemp1", forcastMaxTemp1)
+        intentFutureForecast.putExtra("forcastMinTemp1", forcastMinTemp1)
+        intentFutureForecast.putExtra("forcastAQI1", forcastAQI1)
+
+
+        intentFutureForecast.putExtra("forcastDate2", forcastDate2)
+        intentFutureForecast.putExtra("forcastWeather2", forcastWeather2)
+        intentFutureForecast.putExtra("forcastDay2", forcastDay2)
+        intentFutureForecast.putExtra("forcastImage2", forcastImage2)
+        intentFutureForecast.putExtra("forcastMaxTemp2", forcastMaxTemp2)
+        intentFutureForecast.putExtra("forcastMinTemp2", forcastMinTemp2)
+        intentFutureForecast.putExtra("forcastAQI2", forcastAQI2)
+
+        intentFutureForecast.putExtra("forcastDate3", forcastDate3)
+        intentFutureForecast.putExtra("forcastWeather3", forcastWeather3)
+        intentFutureForecast.putExtra("forcastDay3", forcastDay3)
+        intentFutureForecast.putExtra("forcastImage3", forcastImage3)
+        intentFutureForecast.putExtra("forcastMaxTemp3", forcastMaxTemp3)
+        intentFutureForecast.putExtra("forcastMinTemp3", forcastMinTemp3)
+        intentFutureForecast.putExtra("forcastAQI3", forcastAQI3)
+
+        mainBinding.futureForecast.setOnClickListener {
+            mainBinding.root.context.startActivity(intentFutureForecast)
+        }
+    }
+
 }
