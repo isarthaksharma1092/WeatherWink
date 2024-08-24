@@ -92,6 +92,7 @@ class MainActivity : AppCompatActivity() {
                     dataSetting.setHourlyTemp(it)
                     dataSetting.setAqi(it)
                     dataSetting.setFutureForecast(it)
+                    dataSetting.setWallpaper(it)
                 }
                 mainBinding.shimmerLayout.stopShimmer()
                 mainBinding.shimmerLayout.visibility = View.GONE

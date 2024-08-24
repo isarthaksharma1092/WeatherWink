@@ -2,13 +2,17 @@ package com.isarthaksharma.weatherwink
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.util.Log
 import android.widget.Toast
 import com.isarthaksharma.weatherwink.databinding.ActivityMainBinding
 import com.squareup.picasso.Picasso
+import java.text.SimpleDateFormat
 import java.time.DateTimeException
 import java.time.LocalDate
+import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.util.Date
+import java.util.Locale
 
 @SuppressLint("SetTextI18n")
 class DataSetting(private val mainBinding: ActivityMainBinding) {
@@ -32,6 +36,30 @@ class DataSetting(private val mainBinding: ActivityMainBinding) {
         mainBinding.maxTemp.text = "${data.forecast.forecastday[0].day.maxtemp_c} ℃"
         Toast.makeText(mainBinding.root.context,data.current.condition.text,Toast.LENGTH_LONG).show()
     }
+
+fun setWallpaper(data: dataClass_Weather){
+    val timeFormat = DateTimeFormatter.ofPattern("hh:mm a", Locale.ENGLISH)
+    val sunsetTime = LocalTime.parse(data.forecast.forecastday[0].astro.sunset, timeFormat).hour
+    val currentHour = LocalTime.now().hour
+    val weatherTypeToday = data.current.condition.text.lowercase()
+    // Determine if it's night time
+    val isNightTime = currentHour >= sunsetTime
+    val weatherWallpaper = when {
+        weatherTypeToday.contains("overcast") -> R.drawable.weather_overcast
+        weatherTypeToday.contains("sunny") && !isNightTime -> R.drawable.weather_sunny
+        weatherTypeToday.contains("mist") ->R.drawable.weather_mist_day
+        weatherTypeToday.contains("clear") -> if (isNightTime) R.drawable.weather_clear_night else R.drawable.weather_clear_day
+        weatherTypeToday.contains("wind") -> if (isNightTime) R.drawable.weather_windy_night else R.drawable.weather_windy_day
+        weatherTypeToday.contains("cloudy") -> if (isNightTime) R.drawable.weather_cloudy_night else R.drawable.weather_cloudy_day
+        weatherTypeToday.contains("fog") -> if (isNightTime) R.drawable.weather_fog_night else R.drawable.weather_fog_day
+        weatherTypeToday.contains("thunderstorm") -> if (isNightTime) R.drawable.weather_thunder_night else R.drawable.weather_thunder_day
+        weatherTypeToday.contains("rain") -> if (isNightTime) R.drawable.weather_rain else R.drawable.weather_rain_day
+        else -> if (isNightTime) R.drawable.weather_night_default else R.drawable.weather_day_default
+    }
+
+    mainBinding.weatherWallpaper.setImageResource(weatherWallpaper)
+}
+
 
     fun setMoonSunTime(data: dataClass_Weather) {
         //sunset
